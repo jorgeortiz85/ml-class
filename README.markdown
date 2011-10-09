@@ -33,11 +33,11 @@ The lectures, Matlab, and Octave use 1-based indexes for vectors and matrices, w
 
 Java (and thus Scala) has different primitive types for Ints vs Doubles. Scalala usually does the Right Thing when it comes to Ints vs Doubles, but there's a few corner cases to be aware of:
 
-## constructing matrices
+#### constructing matrices
 
 Mixing Ints and Doubles in a Matrix constructor (e.g., `Matrix((1, 1.0))`) will result in a cryptic message: `error: V is not a scalar value`. The fix is to use Doubles everywhere (e.g., `Matrix((1.0, 1.0))`).
 
-## integer division
+#### integer division
 
 Additions, multiplications, etc between Ints and Doubles will be upcast appropriately. However, division of Ints by Ints will NOT be upcast, and will instead result in integer division, which is probably not what you want.
 
